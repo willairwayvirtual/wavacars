@@ -49,9 +49,9 @@ Partial Class screen2
         '
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 522)
+        Me.Panel1.Location = New System.Drawing.Point(0, 505)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1298, 100)
+        Me.Panel1.Size = New System.Drawing.Size(1109, 45)
         Me.Panel1.TabIndex = 0
         '
         'Label3
@@ -223,7 +223,7 @@ Partial Class screen2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1298, 622)
+        Me.ClientSize = New System.Drawing.Size(1109, 550)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Uname)
