@@ -36,4 +36,29 @@ Public Class screen2
         DataGridView1.DataSource = dt.DefaultView
         conn.Close()
     End Sub
+
+    Private Sub StFlight_Click(sender As Object, e As EventArgs) Handles StFlight.Click
+        If Timer1.Enabled = True Then
+            Timer1.Stop()
+
+        Else
+            time = DateTime.Now
+            Timer1.Start()
+
+        End If
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim difference As TimeSpan = DateTime.Now.Subtract(time)
+        lblTimer.Text = difference.Hours.ToString & ":" &
+            difference.Minutes.ToString & ":" &
+            difference.Seconds.ToString
+    End Sub
+
+    Private Sub CompFlight_Click(sender As Object, e As EventArgs) Handles CompFlight.Click
+        Timer1.Stop()
+
+
+    End Sub
 End Class
