@@ -39,8 +39,11 @@ Public Class screen2
 
     Private Sub StFlight_Click(sender As Object, e As EventArgs) Handles StFlight.Click
         If Timer1.Enabled = True Then
+            ProgressBar1.Increment(1)
             Timer1.Stop()
-
+            If ProgressBar1.Value = 100 Then
+                Timer1.Stop()
+            End If
         Else
             time = DateTime.Now
             Timer1.Start()
@@ -54,6 +57,7 @@ Public Class screen2
         lblTimer.Text = difference.Hours.ToString & ":" &
             difference.Minutes.ToString & ":" &
             difference.Seconds.ToString
+        ProgressBar1.Value = 100
     End Sub
 
     Private Sub CompFlight_Click(sender As Object, e As EventArgs) Handles CompFlight.Click
@@ -94,4 +98,9 @@ Public Class screen2
         MessageBox.Show("Hours saved Have a good day")
     End Sub
 
+    Private Sub ProgressBar1_Click(sender As Object, e As EventArgs) Handles ProgressBar1.Click
+
+
+
+    End Sub
 End Class
