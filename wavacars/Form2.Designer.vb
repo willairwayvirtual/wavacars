@@ -25,7 +25,6 @@ Partial Class screen2
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(screen2))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Uname = New System.Windows.Forms.TextBox()
@@ -57,21 +56,11 @@ Partial Class screen2
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel1.Location = New System.Drawing.Point(0, 505)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1109, 45)
+        Me.Panel1.Size = New System.Drawing.Size(1296, 45)
         Me.Panel1.TabIndex = 0
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(1174, 23)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Label1"
         '
         'Label6
         '
@@ -236,7 +225,7 @@ Partial Class screen2
         '
         Me.ProgressBar1.Location = New System.Drawing.Point(0, 448)
         Me.ProgressBar1.Name = "ProgressBar1"
-        Me.ProgressBar1.Size = New System.Drawing.Size(1109, 51)
+        Me.ProgressBar1.Size = New System.Drawing.Size(1296, 51)
         Me.ProgressBar1.TabIndex = 43
         '
         'Label7
@@ -255,14 +244,14 @@ Partial Class screen2
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(355, 4)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(542, 39)
+        Me.Label8.Size = New System.Drawing.Size(589, 39)
         Me.Label8.TabIndex = 2
-        Me.Label8.Text = "you are connect fsx/ p3d / XPlane " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label8.Text = "you are connect to  fsx/ p3d / XPlane " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(1004, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(1190, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(116, 50)
         Me.PictureBox1.TabIndex = 3
@@ -272,7 +261,7 @@ Partial Class screen2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1109, 550)
+        Me.ClientSize = New System.Drawing.Size(1296, 550)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -320,7 +309,6 @@ Partial Class screen2
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label3 As Label
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label8 As Label

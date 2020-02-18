@@ -57,7 +57,7 @@ Public Class screen2
         lblTimer.Text = difference.Hours.ToString & ":" &
             difference.Minutes.ToString & ":" &
             difference.Seconds.ToString
-        ProgressBar1.Value = 100
+        ProgressBar1.Value = difference.Minutes.ToString
     End Sub
 
     Private Sub CompFlight_Click(sender As Object, e As EventArgs) Handles CompFlight.Click
