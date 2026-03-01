@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class screen2
     Dim provider As String
     Dim dataFile As String
@@ -31,7 +32,7 @@ Public Class screen2
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim difference As TimeSpan = DateTime.Now.Subtract(time)
-        lblTimer.Text = difference.Hours.ToString & ":" &
+        totalhours.Text = difference.Hours.ToString & ":" &
             difference.Minutes.ToString & ":" &
             difference.Seconds.ToString
         ProgressBar1.Value = difference.Minutes.ToString
@@ -47,7 +48,7 @@ Public Class screen2
         conn.Close()
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "C:\VisStudioProj\wav web\willairwayvirtual34\willairwayvirtual34\app_data\willairwayvirtualDBv1.accdb"
+        dataFile = "C:\Users\willj\OneDrive Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
         connString = provider & dataFile
         conn.ConnectionString = connString
         'check status of connection string
@@ -56,10 +57,10 @@ Public Class screen2
         Else
             conn.Close()
         End If
-        Dim savenew As String = "INSERT INTO [acars_log]  (Fltnum,Deptair,lblTimer,Uname) values('" &
+        Dim savenew As String = "INSERT INTO [tblaccessinfo]  (,Uname,totalhours) values('" &
             TextBox1.Text & "','" &
             TextBox2.Text & "','" &
-            lblTimer.Text & "','" &
+            totalhours.Text & "','" &
         Uname.Text & "');"
 
 
@@ -80,5 +81,32 @@ Public Class screen2
 
 
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
+        'Change the following to your access database location
+        dataFile = "C:\Users\willj\OneDrive Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
+        connString = provider & dataFile
+        conn.ConnectionString = connString
+        'check status of connection string
+        If conn.State = ConnectionState.Closed Then
+            conn.Open()
+        Else
+            conn.Close()
+        End If
+
+        Dim dt As New DataTable
+        Dim ds As New DataSet
+        ds.Tables.Add(dt)
+        Dim da As New OleDbDataAdapter
+
+        'da = New OleDbDataAdapter("Select * from flightplan where fltnum Like '%" & TextBox1.Text & "%'", conn)
+        da = New OleDbDataAdapter("Select * from acars_log  WHERE [fltnum] = '" & TextBox1.Text & "' or [Deptair] = '" & TextBox1.Text & "' Or [Arrair] = '" & TextBox2.Text & "'", conn)
+        da.Fill(dt)
+
+        DataGridView1.DataSource = dt.DefaultView
+        conn.Close()
     End Sub
 End Class

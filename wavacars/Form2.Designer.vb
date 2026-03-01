@@ -32,7 +32,7 @@ Partial Class screen2
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Uname = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.lblTimer = New System.Windows.Forms.Label()
+        Me.totalhours = New System.Windows.Forms.Label()
         Me.Label71 = New System.Windows.Forms.Label()
         Me.CompFlight = New System.Windows.Forms.Button()
         Me.StFlight = New System.Windows.Forms.Button()
@@ -42,8 +42,11 @@ Partial Class screen2
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Fltnum = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -53,17 +56,17 @@ Partial Class screen2
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 531)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Location = New System.Drawing.Point(0, 620)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1794, 55)
+        Me.Panel1.Size = New System.Drawing.Size(1924, 55)
         Me.Panel1.TabIndex = 0
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(1587, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(155, 62)
         Me.PictureBox1.TabIndex = 3
@@ -96,7 +99,7 @@ Partial Class screen2
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Location = New System.Drawing.Point(409, 418)
+        Me.Label6.Location = New System.Drawing.Point(433, 497)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(458, 39)
@@ -107,7 +110,7 @@ Partial Class screen2
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(419, 363)
+        Me.Label5.Location = New System.Drawing.Point(443, 442)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(109, 36)
@@ -119,8 +122,8 @@ Partial Class screen2
         Me.Uname.BackColor = System.Drawing.Color.Silver
         Me.Uname.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Uname.ForeColor = System.Drawing.Color.White
-        Me.Uname.Location = New System.Drawing.Point(560, 364)
-        Me.Uname.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Uname.Location = New System.Drawing.Point(584, 443)
+        Me.Uname.Margin = New System.Windows.Forms.Padding(4)
         Me.Uname.Name = "Uname"
         Me.Uname.Size = New System.Drawing.Size(285, 46)
         Me.Uname.TabIndex = 40
@@ -129,32 +132,32 @@ Partial Class screen2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1193, -7)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Location = New System.Drawing.Point(1396, -13)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(565, 87)
         Me.Button2.TabIndex = 39
         Me.Button2.Text = "save myHours"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'lblTimer
+        'totalhours
         '
-        Me.lblTimer.AutoSize = True
-        Me.lblTimer.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.lblTimer.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTimer.Location = New System.Drawing.Point(571, 176)
-        Me.lblTimer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblTimer.Name = "lblTimer"
-        Me.lblTimer.Size = New System.Drawing.Size(215, 91)
-        Me.lblTimer.TabIndex = 37
-        Me.lblTimer.Text = "0:0:0"
+        Me.totalhours.AutoSize = True
+        Me.totalhours.BackColor = System.Drawing.Color.DarkSeaGreen
+        Me.totalhours.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.totalhours.Location = New System.Drawing.Point(595, 255)
+        Me.totalhours.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.totalhours.Name = "totalhours"
+        Me.totalhours.Size = New System.Drawing.Size(215, 91)
+        Me.totalhours.TabIndex = 37
+        Me.totalhours.Text = "0:0:0"
         '
         'Label71
         '
         Me.Label71.AutoSize = True
         Me.Label71.BackColor = System.Drawing.Color.Red
         Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(336, 272)
+        Me.Label71.Location = New System.Drawing.Point(360, 351)
         Me.Label71.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(681, 25)
@@ -165,8 +168,8 @@ Partial Class screen2
         '
         Me.CompFlight.BackColor = System.Drawing.Color.Red
         Me.CompFlight.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CompFlight.Location = New System.Drawing.Point(759, 300)
-        Me.CompFlight.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.CompFlight.Location = New System.Drawing.Point(783, 379)
+        Me.CompFlight.Margin = New System.Windows.Forms.Padding(4)
         Me.CompFlight.Name = "CompFlight"
         Me.CompFlight.Size = New System.Drawing.Size(343, 57)
         Me.CompFlight.TabIndex = 35
@@ -177,8 +180,8 @@ Partial Class screen2
         '
         Me.StFlight.BackColor = System.Drawing.Color.LightSalmon
         Me.StFlight.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StFlight.Location = New System.Drawing.Point(219, 294)
-        Me.StFlight.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.StFlight.Location = New System.Drawing.Point(243, 373)
+        Me.StFlight.Margin = New System.Windows.Forms.Padding(4)
         Me.StFlight.Name = "StFlight"
         Me.StFlight.Size = New System.Drawing.Size(457, 63)
         Me.StFlight.TabIndex = 34
@@ -190,8 +193,8 @@ Partial Class screen2
         Me.TextBox2.BackColor = System.Drawing.Color.Silver
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.White
-        Me.TextBox2.Location = New System.Drawing.Point(871, 2)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox2.Location = New System.Drawing.Point(659, 8)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(327, 46)
         Me.TextBox2.TabIndex = 29
@@ -201,8 +204,8 @@ Partial Class screen2
         Me.TextBox1.BackColor = System.Drawing.Color.Silver
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(277, 7)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Location = New System.Drawing.Point(149, 11)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(319, 46)
         Me.TextBox1.TabIndex = 28
@@ -212,8 +215,8 @@ Partial Class screen2
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(53, 460)
-        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ProgressBar1.Location = New System.Drawing.Point(77, 539)
+        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(1740, 63)
         Me.ProgressBar1.TabIndex = 43
@@ -222,7 +225,7 @@ Partial Class screen2
         '
         Me.Fltnum.AutoSize = True
         Me.Fltnum.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fltnum.Location = New System.Drawing.Point(67, 11)
+        Me.Fltnum.Location = New System.Drawing.Point(4, 7)
         Me.Fltnum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Fltnum.Name = "Fltnum"
         Me.Fltnum.Size = New System.Drawing.Size(121, 39)
@@ -233,18 +236,39 @@ Partial Class screen2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(655, 11)
+        Me.Label1.Location = New System.Drawing.Point(491, 14)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(131, 39)
         Me.Label1.TabIndex = 45
         Me.Label1.Text = "DeptAir"
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 102)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersWidth = 51
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(1803, 150)
+        Me.DataGridView1.TabIndex = 46
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1027, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(362, 70)
+        Me.Button1.TabIndex = 47
+        Me.Button1.Text = "fing my flhg"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'screen2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1794, 586)
+        Me.ClientSize = New System.Drawing.Size(1924, 675)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Fltnum)
         Me.Controls.Add(Me.ProgressBar1)
@@ -252,7 +276,7 @@ Partial Class screen2
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Uname)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.lblTimer)
+        Me.Controls.Add(Me.totalhours)
         Me.Controls.Add(Me.Label71)
         Me.Controls.Add(Me.CompFlight)
         Me.Controls.Add(Me.StFlight)
@@ -261,12 +285,13 @@ Partial Class screen2
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "screen2"
         Me.Text = "screen2"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -277,7 +302,7 @@ Partial Class screen2
     Friend WithEvents Label5 As Label
     Friend WithEvents Uname As TextBox
     Friend WithEvents Button2 As Button
-    Friend WithEvents lblTimer As Label
+    Friend WithEvents totalhours As Label
     Friend WithEvents Label71 As Label
     Friend WithEvents CompFlight As Button
     Friend WithEvents StFlight As Button
@@ -290,4 +315,6 @@ Partial Class screen2
     Friend WithEvents Label7 As Label
     Friend WithEvents Fltnum As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
 End Class
