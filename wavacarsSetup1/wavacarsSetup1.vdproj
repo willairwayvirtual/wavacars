@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_07553C9671C5BF3966F5DDCE1644A2ED"
+        "MsmKey" = "8:_BE2E66EAC7683E8F5D3109AFDA1CD007"
         "OwnerKey" = "8:_C96E60BFC79A46A89F0986D6435D459F"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_07553C9671C5BF3966F5DDCE1644A2ED"
+        "OwnerKey" = "8:_C96E60BFC79A46A89F0986D6435D459F"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C96E60BFC79A46A89F0986D6435D459F"
+        "OwnerKey" = "8:_BE2E66EAC7683E8F5D3109AFDA1CD007"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,6 +61,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -77,6 +85,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -106,14 +122,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_07553C9671C5BF3966F5DDCE1644A2ED"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BE2E66EAC7683E8F5D3109AFDA1CD007"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_07553C9671C5BF3966F5DDCE1644A2ED"
+                    "_BE2E66EAC7683E8F5D3109AFDA1CD007"
                     {
                     "Name" = "8:System.Net.Http.dll"
                     "Attributes" = "3:512"
@@ -763,7 +779,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C96E60BFC79A46A89F0986D6435D459F"
             {
-            "SourcePath" = "8:..\\wavacars\\obj\\Debug\\wavacars.exe"
+            "SourcePath" = "8:..\\wavacars\\obj\\Release\\wavacars.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_DEC2942058DA4ABB9FD5A37A0310276C"
