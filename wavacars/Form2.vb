@@ -57,7 +57,7 @@ Public Class screen2
         Else
             conn.Close()
         End If
-        Dim savenew As String = "INSERT INTO [tblaccessinfo]  (,Uname,totalhours) values('" &
+        Dim savenew As String = "INSERT INTO [tblaccessinfo]  (totalhours) values('" &
             TextBox1.Text & "','" &
             TextBox2.Text & "','" &
             totalhours.Text & "','" &
