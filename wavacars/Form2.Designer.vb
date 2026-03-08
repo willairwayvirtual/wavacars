@@ -121,10 +121,10 @@ Partial Class screen2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1134, 351)
+        Me.Button2.Location = New System.Drawing.Point(1079, 378)
         Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(236, 58)
+        Me.Button2.Size = New System.Drawing.Size(262, 62)
         Me.Button2.TabIndex = 39
         Me.Button2.Text = "save my Hours"
         Me.Button2.UseVisualStyleBackColor = False
@@ -235,7 +235,7 @@ Partial Class screen2
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 102)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 112)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
@@ -244,7 +244,7 @@ Partial Class screen2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(1489, 18)
+        Me.Button1.Location = New System.Drawing.Point(19, 64)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 39)
         Me.Button1.TabIndex = 47
