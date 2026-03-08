@@ -2,6 +2,7 @@
 Public Class Form1
     Dim provider As String
     Dim dataFile As String
+    Dim routeFile As String
     Dim connString As String
     Dim myConnection As OleDbConnection = New OleDbConnection
     Dim conn As OleDbConnection = New OleDbConnection
@@ -10,8 +11,9 @@ Public Class Form1
         myConnection.Close()
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "C:\Users\willj\OneDrive Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
-        connString = provider & dataFile
+        routeFile = "C:\Users\willj\OneDrive - Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
+        dataFile = "willairwayvirtualDbv1.accdb"
+        connString = provider & routeFile & "\" & dataFile
         myConnection.ConnectionString = connString
         myConnection.Open()
         'the query:

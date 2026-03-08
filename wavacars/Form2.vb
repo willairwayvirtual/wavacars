@@ -3,6 +3,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class screen2
     Dim provider As String
     Dim dataFile As String
+    Dim routeFile As String
     Dim connString As String
     Dim time As New DateTime
 
@@ -48,8 +49,9 @@ Public Class screen2
         conn.Close()
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "C:\Users\willj\OneDrive Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
-        connString = provider & dataFile
+        routeFile = "C:\Users\willj\OneDrive - Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
+        dataFile = "willairwayvirtualDbv1.accdb"
+        connString = provider & routeFile & "\" & dataFile
         conn.ConnectionString = connString
         'check status of connection string
         If conn.State = ConnectionState.Closed Then
@@ -57,15 +59,9 @@ Public Class screen2
         Else
             conn.Close()
         End If
-        Dim savenew As String = "INSERT INTO [tblaccessinfo]  (totalhours) values('" &
-            TextBox1.Text & "','" &
-            TextBox2.Text & "','" &
-            totalhours.Text & "','" &
-        Uname.Text & "');"
-
-
-
-
+        Dim savenew As String = "INSERT INTO [tblaccessinfo]  (lastflight,uname) values('" &
+         totalhours.Text & "','" &
+         Uname.Text & "');"
 
         Dim cmd As New OleDbCommand
 
@@ -84,11 +80,12 @@ Public Class screen2
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        conn.Close()
         provider = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source ="
         'Change the following to your access database location
-        dataFile = "C:\Users\willj\OneDrive Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
-        connString = provider & dataFile
+        routeFile = "C:\Users\willj\OneDrive - Wijsoftware\WIJ employment\VisStudioProj\web Projects\willairwayvirtual34\willairwayvirtual34\app_data"
+        dataFile = "willairwayvirtualDbv1.accdb"
+        connString = provider & routeFile & "\" & dataFile
         conn.ConnectionString = connString
         'check status of connection string
         If conn.State = ConnectionState.Closed Then
@@ -103,10 +100,26 @@ Public Class screen2
         Dim da As New OleDbDataAdapter
 
         'da = New OleDbDataAdapter("Select * from flightplan where fltnum Like '%" & TextBox1.Text & "%'", conn)
-        da = New OleDbDataAdapter("Select * from acars_log  WHERE [fltnum] = '" & TextBox1.Text & "' or [Deptair] = '" & TextBox1.Text & "' Or [Arrair] = '" & TextBox2.Text & "'", conn)
+        da = New OleDbDataAdapter("Select * from acars_log  WHERE [fltnum] = '" & TextBox1.Text & "' or [Deptair] = '" & TextBox2.Text & "' Or [Arrair] = '" & TextBox3.Text & "'", conn)
         da.Fill(dt)
 
         DataGridView1.DataSource = dt.DefaultView
         conn.Close()
+    End Sub
+
+    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
+
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Uname_TextChanged(sender As Object, e As EventArgs) Handles Uname.TextChanged
+
+    End Sub
+
+    Private Sub Fltnum_Click(sender As Object, e As EventArgs) Handles Fltnum.Click
+
     End Sub
 End Class
